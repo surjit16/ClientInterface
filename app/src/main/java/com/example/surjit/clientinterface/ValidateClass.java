@@ -74,10 +74,10 @@ public class ValidateClass extends AsyncTask<String, Void, Boolean> {
 
     @Override
     protected Boolean doInBackground(String... voids) {
-        hashKey = voids[0];
-
         String url_select = "https://uidchain.000webhostapp.com/data.json";
         HttpHandler sh = new HttpHandler();
+        hashKey = voids[0];
+
         String jsonStr = sh.makeServiceCall(url_select);
 
         if (jsonStr != null) {
